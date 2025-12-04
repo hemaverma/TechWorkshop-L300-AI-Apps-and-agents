@@ -26,7 +26,7 @@ functions = create_function_tool_for_agent("customer_loyalty")
 toolset = ToolSet()
 toolset.add(functions)
 project_client.agents.enable_auto_function_calls(tools=functions)
-
+#
 initialize_agent(
     project_client=project_client,
     model=os.environ["AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME"],

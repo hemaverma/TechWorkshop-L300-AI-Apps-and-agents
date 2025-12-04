@@ -13,7 +13,7 @@ load_dotenv()
 CORA_PROMPT_TARGET = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'prompts', 'ShopperAgentPrompt.txt')
 with open(CORA_PROMPT_TARGET, 'r', encoding='utf-8') as file:
     CORA_PROMPT = file.read()
-
+#
 project_endpoint = os.environ["AZURE_AI_AGENT_ENDPOINT"]
 
 project_client = AIProjectClient(
