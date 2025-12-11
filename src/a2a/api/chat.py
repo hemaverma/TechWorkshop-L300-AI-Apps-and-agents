@@ -55,7 +55,6 @@ async def send_message(chat_message: ChatMessage):
         logger.error(f"Error processing chat message: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @router.post("/stream")
 async def stream_message(chat_message: ChatMessage):
     """Stream a response from the product management agent"""
@@ -107,8 +106,6 @@ async def stream_message(chat_message: ChatMessage):
     except Exception as e:
         logger.error(f"Error setting up streaming: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
-
 @router.get("/sessions")
 async def get_active_sessions():
     """Get list of active chat sessions"""

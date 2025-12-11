@@ -252,6 +252,7 @@ class SemanticKernelProductManagementAgent:
             instructions=(
                 "Your role is to carefully analyze the user's request and respond as best as you can. "
                 'Your primary goal is precise and efficient delegation to ensure customers and employees receive accurate and specialized '
+                'Make sure any Marketing and Product description related questions are sent to the MarketingAgent, any product ranking questions are sent to the RankerAgent, '
                 'assistance promptly.'
             ),
             plugins=[product_agent, marketing_agent, ranker_agent],

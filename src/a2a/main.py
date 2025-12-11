@@ -13,6 +13,12 @@ from dotenv import load_dotenv
 from api.chat import router as chat_router
 from agent.a2a_server import A2AServer
 
+# OpenTelemetry and Azure Monitor imports
+from opentelemetry import trace
+from azure.monitor.opentelemetry import configure_azure_monitor
+from opentelemetry.instrumentation.openai_v2 import OpenAIInstrumentor
+from azure.ai.agents.telemetry import trace_function
+
 # Load environment variables
 load_dotenv()
 
